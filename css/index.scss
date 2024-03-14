@@ -1,0 +1,145 @@
+// Variables
+$background-color: gray;
+$primary-color: #0f0f0f;
+$secondary-color: #272727;
+$input-border-color: #272727;
+$input-background-color: #0f0f0f;
+$input-text-color: blue;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Includes
+@include flex-center;
+
+body {
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+span {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-navbar-div {
+  background-color: $primary-color;
+  padding: 0 20px;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  @include flex-center;
+}
+
+.navbar-left-content {
+  @include flex-center;
+  gap: 15px;
+}
+
+.humber-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  @include flex-center;
+}
+
+.youtube-icon {
+  height: 25px;
+  min-width: 70px;
+}
+
+.main-search-bar {
+  @include flex-center;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-search-bar {
+  @include flex-center;
+  background-color: $secondary-color;
+  height: 40px;
+  width: 90%;
+  border-radius: 20px;
+}
+
+.input-field {
+  width: 90%;
+  height: 40px;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid $input-border-color;
+  padding-left: 10px;
+  outline-color: $input-text-color;
+  font-size: 17px;
+  background-color: $input-background-color;
+}
+
+.search-icon {
+  @include flex-center;
+  width: 10%;
+  min-width: 50px;
+}
+
+.voice-icon,
+.create-icon,
+.notificationIcon {
+  border-radius: 50%;
+  background-color: $secondary-color;
+  width: 40px;
+  height: 40px;
+  @include flex-center;
+}
+
+.main-sidebar-div {
+  top: 54px;
+  padding: 0;
+  width: 100px;
+  height: calc(100vh - 54px);
+  background-color: black;
+  position: fixed;
+
+  .aside-icons {
+    @include flex-center;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 70%;
+    padding: 8px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    span {
+      color: white;
+      font-size: 12px;
+    }
+  }
+}
+
+.main-body-container {
+  display: flex;
+}
+
+.main-body {
+  margin-top: 100px;
+  height: 200vh;
+  margin-left: auto;
+  width: calc(100vw - 115px);
+}
