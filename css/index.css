@@ -11,6 +11,11 @@ span {
   cursor: pointer;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -64,7 +69,7 @@ span {
 }
 
 .input-field {
-  width: 90%;
+  width: calc(100% - 50px);
   height: 40px;
   border-radius: 20px 0 0 20px;
   border: 1px solid #272727;
@@ -100,18 +105,9 @@ span {
        column-gap: 20px;
 }
 
-.create-icon {
-  border-radius: 50%;
-  background-color: #272727;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.notificationIcon {
+.create-icon,
+.notificationIcon,
+.profileIcon {
   border-radius: 50%;
   background-color: #272727;
   width: 40px;
@@ -127,9 +123,13 @@ span {
 
 .main-sidebar-div {
   top: 54px;
-  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-bottom: 20px;
+  padding: 20px 0px;
   width: 100px;
-  height: calc(100vh - 54px);
+  height: calc(100vh - 70px);
   background-color: black;
   position: fixed;
 }
@@ -137,9 +137,8 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-top: 20px;
-  margin-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
   width: 70%;
   padding: 8px 18px;
   border-radius: 12px;
@@ -158,8 +157,12 @@ span {
 }
 
 .main-body {
-  margin-top: 100px;
-  height: 200vh;
+  margin-top: 70px;
+  height: 100vh;
   margin-left: auto;
-  width: calc(100vw - 115px);
+  width: calc(100vw - 100px);
+}
+
+.home {
+  height: 150vh;
 }/*# sourceMappingURL=index.css.map */
