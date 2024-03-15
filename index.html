@@ -281,51 +281,18 @@
     </ul>
 
     <div class="main-body">
-      <div class="home" >
-        <h1>Home</h1>
-      </div>
-      <div class="shorts">
-        <h1>Shorts</h1>
-      </div>
-      <div class="subscriptions">
-        <h1>Subscriptions</h1>
-      </div>
-      <div class="you">
-        <h1>You</h1>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>  
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>  
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>  
       </div>
     </div>
 
-    <script>
-      const homeLink = document.getElementById("home-link");
-      const shortsLink = document.getElementById("shorts-link");
-      const subscriptionsLink = document.getElementById("subscriptions-link");
-      const youLink = document.getElementById("you-link");
-
-      homeLink.addEventListener("click", () => {
-        document.querySelectorAll(".main-body > div").forEach((div) => {
-          div.style.display = "none";
-        });
-        document.querySelector(".home").style.display = "block";
-
-      });
-      shortsLink.addEventListener("click", () => {
-        document.querySelectorAll(".main-body > div").forEach((div) => {
-          div.style.display = "none";
-        });
-        document.querySelector(".shorts").style.display = "block";
-      });
-      subscriptionsLink.addEventListener("click", () => {
-        document.querySelectorAll(".main-body > div").forEach((div) => {
-          div.style.display = "none";
-        });
-        document.querySelector(".subscriptions").style.display = "block";
-      });
-      youLink.addEventListener("click", () => {
-        document.querySelectorAll(".main-body > div").forEach((div) => {
-          div.style.display = "none";
-        });
-        document.querySelector(".you").style.display = "block";
-      });
-    </script>
   </body>
 </html>
